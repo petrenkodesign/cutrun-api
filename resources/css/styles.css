@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* styles.css */
 body {
   margin: 0;
@@ -33,6 +34,7 @@ a {
 }
 
 .header {
+  min-height: 50px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -49,7 +51,7 @@ a {
   overflow: hidden;
 }
 
-.flex {
+.flex-con {
   display: flex;
   flex-wrap: wrap;
   column-gap: 5rem;
@@ -87,7 +89,7 @@ a {
 }
 
 .hero {
-  margin-top: 52px;
+  margin-top: 50px;
   position: relative;
   height: 82vh;
   overflow: hidden;
@@ -336,9 +338,9 @@ footer {
   .nav {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
+    position: fixed;
+    top: 55px;
+    right: 5px;
     background: white;
     width: 200px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);

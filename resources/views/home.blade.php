@@ -3,26 +3,6 @@
 @section('title', 'Cut&Run marathon and activity tracker')
 
 @section('content')
-<header class="header">
-  <div class="container flex">
-    <div class="logo">
-      <a href="#">
-        <img src="{{ asset('img/cutrun-logo.png') }}">
-      </a>
-    </div>
-
-    <button class="menu-toggle" id="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <nav class="nav" id="nav-menu">
-      <a href="#events">Events</a>
-      <a href="#price">Pricing</a>
-      <a href="https://trx.cutrun.top">Dashboard</a>
-    </nav>
-  </div>
-</header>
-
 <section class="hero">
   <video autoplay muted loop class="hero-video">
     <source src="{{ asset('video/cutrun-home-video.mp4') }}" type="video/mp4" />
@@ -60,7 +40,7 @@
   </section>
 
   <section class="split-section">
-    <div class="container flex">
+    <div class="container flex-con">
       <img src="img/cutrun-app.png" alt="Race Image" class="split-image" />
       <div class="split-text">
         <h2>Track your race. <br>Own your progress.</h2>
@@ -155,7 +135,4 @@
     </div>
   </section>
 
-<footer>
-  &copy; 2025 CUTRUN. All rights reserved.
-</footer>
 @endsection
