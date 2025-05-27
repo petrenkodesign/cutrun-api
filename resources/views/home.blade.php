@@ -3,6 +3,7 @@
 @section('title', 'Cut&Run marathon and activity tracker')
 
 @section('content')
+
 <section class="hero">
   <video autoplay muted loop class="hero-video">
     <source src="{{ asset('video/cutrun-home-video.mp4') }}" type="video/mp4" />
@@ -134,5 +135,4 @@
       </div>
     </div>
   </section>
-
 @endsection
