@@ -115,24 +115,20 @@
 
   <section class="event-section">
     <div class="container">
-      <h2 class="section-title">Upcoming Events</h2>
-      <div class="event-cards">
-        <a href="#/events/event-1" class="event-card">
-          <img src="/img/events/city-marathon-thmb.jpg" alt="Event 1" />
-          <h3>City Marathon 2025</h3>
-          <p>Join thousands in the heart of the city for an unforgettable run.</p>
-        </a>
-        <a href="#/events/event-2" class="event-card">
-          <img src="/img/events/trail-event-thmb.jpg" alt="Event 2" />
-          <h3>Mountain Trail Challenge</h3>
-          <p>Test your endurance on scenic and challenging mountain terrain.</p>
-        </a>
-        <a href="#/events/event-3" class="event-card">
-          <img src="/img/events/beach-run-thmb.jpg" alt="Event 3" />
-          <h3>Sunset Beach Run</h3>
-          <p>A relaxed coastal run timed perfectly with the golden sunset.</p>
-        </a>
-      </div>
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="event-cards">
+            @foreach($events as $event)
+                <a href="{{ route('events.show', $event->slug) }}" class="event-card">
+                    <img src="{{ $event->image_url }}" alt="{{ $event->title }}" />
+                    <h3>{{ $event->title }}</h3>
+                    <p>{{ $event->short_description }}</p>
+                </a>
+            @endforeach
+
+            @if($events->isEmpty())
+                <p class="text-center text-gray-500 w-full">No upcoming events at the moment.</p>
+            @endif
+        </div>
     </div>
   </section>
 @endsection

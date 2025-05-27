@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Models\Event;
 
 Route::get('/', function () {
-    return view('home');
+    $events = Event::latest('event_date')
+        ->take(3)
+        ->get();
+    return view('home', compact('events'));
 });
 
 
