@@ -14,7 +14,7 @@
     <header class="header">
         <div class="container flex-con">
             <div class="logo">
-            <a href="#">
+            <a href="/">
                 <img src="{{ asset('img/cutrun-logo.png') }}">
             </a>
             </div>
@@ -24,7 +24,7 @@
             </button>
 
             <nav class="nav" id="nav-menu">
-            <a href="#events">Events</a>
+            <a href="events">Events</a>
             <a href="#price">Pricing</a>
             <a href="https://trx.cutrun.top">Dashboard</a>
             </nav>
