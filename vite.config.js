@@ -10,4 +10,18 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    build: {
+        manifest: true,
+        outDir: 'public/build',
+        emptyOutDir: true,
+        rollupOptions: {
+            input: ['resources/css/styles.css', 'resources/js/main.js'],
+            output: {
+                // щоб не створювалося підкаталогу .vite
+                entryFileNames: '[name].[hash].js',
+                chunkFileNames: '[name].[hash].js',
+                assetFileNames: 'assets/[name].[hash].[ext]',
+            },
+        },
+    }
 });
