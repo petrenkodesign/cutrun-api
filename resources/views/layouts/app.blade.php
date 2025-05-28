@@ -26,7 +26,7 @@
             <nav class="nav" id="nav-menu">
             <a href="/events">Events</a>
             <a href="#price">Pricing</a>
-            <a href="https://trx.cutrun.top">Dashboard</a>
+            <a href="/dashboard">Dashboard</a>
             </nav>
         </div>
     </header>
