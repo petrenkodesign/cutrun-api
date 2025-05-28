@@ -5,7 +5,7 @@
 @section('content')
 <div class="flex flex-col items-center justify-center text-[#333] min-h-[92vh]">
     <img
-        src="/img/404.png"
+        src="/img/404.jpg"
         alt="404 Not Found"
         class="max-w-[300px] mb-5"
     />
