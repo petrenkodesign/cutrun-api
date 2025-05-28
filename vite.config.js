@@ -10,6 +10,7 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    publicDir: false,
     build: {
         manifest: true,
         outDir: 'public/build',
@@ -18,8 +19,8 @@ export default defineConfig({
             input: ['resources/css/styles.css', 'resources/js/main.js'],
             output: {
                 // щоб не створювалося підкаталогу .vite
-                entryFileNames: '[name].[hash].js',
-                chunkFileNames: '[name].[hash].js',
+                entryFileNames: 'assets/[name].[hash].js',
+                chunkFileNames: 'assets/[name].[hash].js',
                 assetFileNames: 'assets/[name].[hash].[ext]',
             },
         },
