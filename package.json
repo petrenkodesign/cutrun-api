@@ -1,8 +1,9 @@
 {
     "private": true,
     "type": "module",
+    "_comment": "buil is crank for vite manifest, need search another method in future",
     "scripts": {
-        "build": "vite build",
+        "build": "vite build && cp public/build/.vite/manifest.json public/build/manifest.json",
         "dev": "vite"
     },
     "devDependencies": {
